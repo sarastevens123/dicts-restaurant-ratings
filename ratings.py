@@ -16,7 +16,11 @@ def create_dictionary(filename):
         
         restaurants_and_ratings[restaurant]=restaurants_and_ratings.get(restaurant, rating)
 
+    open_file.close()
+
     return restaurants_and_ratings
+
+    
     
 
 def sort_restaurants_alphad(dictionary):
@@ -48,7 +52,7 @@ def run_program(filename):
     print_restaurants_ratings(sort_restaurants_alphad(create_dictionary(filename)))
 
     restaurants_and_ratings=create_dictionary(filename)
-    
+
     useradded_restaurants_and_ratings=take_user_input(restaurants_and_ratings)
 
     print('\nYour rating has been added.\n')
